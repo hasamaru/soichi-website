@@ -112,7 +112,14 @@
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-gray-100 fade-in-up"
                     style="animation-delay: 0.2s;">
-                    <form action="#" method="POST" class="space-y-8">
+                    <!-- Formspree Integration -->
+                    <!-- IMPORTANT: Replace 'YOUR_FORM_ID' with your actual Formspree Form ID -->
+                    <form action="https://formspree.io/f/xrbjwrnl" method="POST" class="space-y-8">
+
+                        <!-- Hidden fields for email formatting -->
+                        <input type="hidden" name="_subject" value="Soichi株式会社へのお問い合わせ">
+                        <input type="hidden" name="_next" value="contact.html">
+                        <!-- Redirect back to contact page after submission -->
 
                         <!-- Purpose Dropdown -->
                         <div>
