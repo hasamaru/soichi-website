@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Soichi Inc.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                    },
+                    colors: {
+                        'soichi-black': '#1a1a1a',
+                        'soichi-gray': '#f5f5f7',
+                        'soichi-blue': '#0066cc',
+                        'soichi-red': '#cc0000',
+                        'soichi-yellow': '#FFD700',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="text-soichi-black bg-white flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100 transition-all duration-300"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="images/logo_transparent.png" alt="Soichi Inc." class="h-10 w-auto">
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="about.html"
+                        class="text-sm font-medium text-gray-600 hover:text-black transition-colors">About</a>
+                    <a href="services.html"
+                        class="text-sm font-medium text-gray-600 hover:text-black transition-colors">Services</a>
+                    <a href="news.html"
+                        class="text-sm font-medium text-gray-600 hover:text-black transition-colors">News</a>
+                    <a href="contact.html"
+                        class="px-5 py-2.5 text-sm font-medium text-black bg-soichi-yellow rounded-full hover:bg-yellow-400 transition-all">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-black focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="about.html"
+                    class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-black hover:bg-gray-50">About</a>
+                <a href="services.html"
+                    class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-black hover:bg-gray-50">Services</a>
+                <a href="news.html"
+                    class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-black hover:bg-gray-50">News</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 text-base font-medium text-black bg-soichi-yellow">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-20">
+        <!-- Page Header -->
+        <section class="bg-soichi-gray py-20 md:py-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6 fade-in-up">Contact Us</h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto font-light fade-in-up" style="animation-delay: 0.1s;">
+                    事業のご相談、協業のご提案など、<br>お気軽にお問い合わせください。
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="py-24 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-gray-100 fade-in-up"
+                    style="animation-delay: 0.2s;">
+                    <form action="#" method="POST" class="space-y-8">
+
+                        <!-- Purpose Dropdown -->
+                        <div>
+                            <label for="purpose" class="block text-sm font-semibold text-gray-700 mb-2">お問い合わせ目的 <span
+                                    class="text-red-500">*</span></label>
+                            <select id="purpose" name="purpose" required
+                                class="w-full px-4 py-3 rounded-lg bg-gray-50 border-transparent focus:border-soichi-blue focus:bg-white focus:ring-0 transition-colors appearance-none">
+                                <option value="" disabled selected>選択してください</option>
+                                <option value="business">事業のご相談</option>
+                                <option value="partnership">協業のご提案</option>
+                                <option value="recruit">採用に関するご相談</option>
+                                <option value="other">その他</option>
+                            </select>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">お名前 <span
+                                        class="text-red-500">*</span></label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-50 border-transparent focus:border-soichi-blue focus:bg-white focus:ring-0 transition-colors"
+                                    placeholder="山田 太郎">
+                            </div>
+                            <div>
+                                <label for="company" class="block text-sm font-semibold text-gray-700 mb-2">会社名</label>
+                                <input type="text" id="company" name="company"
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-50 border-transparent focus:border-soichi-blue focus:bg-white focus:ring-0 transition-colors"
+                                    placeholder="Soichi株式会社">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">メールアドレス <span
+                                    class="text-red-500">*</span></label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 rounded-lg bg-gray-50 border-transparent focus:border-soichi-blue focus:bg-white focus:ring-0 transition-colors"
+                                placeholder="taro.yamada@example.com">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">お問い合わせ内容 <span
+                                    class="text-red-500">*</span></label>
+                            <textarea id="message" name="message" rows="6" required
+                                class="w-full px-4 py-3 rounded-lg bg-gray-50 border-transparent focus:border-soichi-blue focus:bg-white focus:ring-0 transition-colors"
+                                placeholder="ご相談内容をご記入ください"></textarea>
+                        </div>
+
+                        <div class="text-center pt-4">
+                            <button type="submit"
+                                class="w-full md:w-auto px-10 py-4 text-base font-semibold text-black bg-soichi-yellow rounded-full hover:bg-yellow-400 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                                送信する
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="mt-12 pt-8 border-t border-gray-100 text-center">
+                        <p class="text-gray-500 text-sm mb-2">直接メールでのお問い合わせはこちら</p>
+                        <a href="mailto:hasama@soichi.tokyo"
+                            class="text-lg font-semibold text-soichi-blue hover:text-blue-400 transition-colors">hasama@soichi.tokyo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-soichi-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="index.html" class="block mb-6">
+                        <img src="images/logo_transparent.png" alt="Soichi Inc."
+                            class="h-12 w-auto brightness-0 invert">
+                    </a>
+                    <p class="text-gray-400 max-w-sm">
+                        テクノロジーとクリエイティブで、<br>ビジネスの未来を実装する。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Sitemap</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="news.html" class="hover:text-white transition-colors">News</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-400 mb-2">Soichi株式会社</p>
+                    <p class="text-gray-400 mb-4">〒150-0043<br>東京都渋谷区道玄坂1丁目10番8号<br>渋谷道玄坂東急ビル2F−C</p>
+                    <a href="mailto:hasama@soichi.tokyo"
+                        class="text-soichi-yellow hover:text-yellow-400 transition-colors">hasama@soichi.tokyo</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">&copy; 2025 Soichi, Inc. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <!-- Social Icons Removed as per request -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

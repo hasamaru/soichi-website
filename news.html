@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News | Soichi Inc.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                    },
+                    colors: {
+                        'soichi-black': '#1a1a1a',
+                        'soichi-gray': '#f5f5f7',
+                        'soichi-blue': '#0066cc',
+                        'soichi-red': '#cc0000',
+                        'soichi-yellow': '#FFD700',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="text-soichi-black bg-white flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100 transition-all duration-300"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="images/logo_transparent.png" alt="Soichi Inc." class="h-10 w-auto">
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="about.html"
+                        class="text-sm font-medium text-gray-600 hover:text-black transition-colors">About</a>
+                    <a href="services.html"
+                        class="text-sm font-medium text-gray-600 hover:text-black transition-colors">Services</a>
+                    <a href="news.html" class="text-sm font-medium text-black transition-colors">News</a>
+                    <a href="contact.html"
+                        class="px-5 py-2.5 text-sm font-medium text-black bg-soichi-yellow rounded-full hover:bg-yellow-400 transition-all">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-black focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="about.html"
+                    class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-black hover:bg-gray-50">About</a>
+                <a href="services.html"
+                    class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-black hover:bg-gray-50">Services</a>
+                <a href="news.html" class="block px-3 py-2 text-base font-medium text-black bg-gray-50">News</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-black hover:bg-gray-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-20">
+        <!-- Page Header -->
+        <section class="bg-soichi-gray py-20 md:py-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6 fade-in-up">News Release</h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto font-light fade-in-up" style="animation-delay: 0.1s;">
+                    Soichi株式会社の最新情報をお届けします。
+                </p>
+            </div>
+        </section>
+
+        <!-- News List -->
+        <section class="py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- News List (Compact) -->
+                <div class="mb-20">
+                    <h2 class="text-2xl font-bold mb-8 tracking-tight">Latest News</h2>
+                    <div class="space-y-4">
+                        <a href="#news-20251118"
+                            class="block p-6 rounded-xl border border-gray-100 hover:border-soichi-blue/30 hover:shadow-md transition-all duration-300 bg-white group">
+                            <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                                <div class="flex items-center gap-4 min-w-fit">
+                                    <span class="text-gray-500 font-mono text-sm">2025.11.18</span>
+                                    <span
+                                        class="inline-block px-2 py-1 text-xs font-semibold text-soichi-blue bg-blue-50 rounded-full">Press
+                                        Release</span>
+                                </div>
+                                <h3
+                                    class="font-medium text-gray-900 group-hover:text-soichi-blue transition-colors line-clamp-1">
+                                    Soichi、エニアド社と提携し、ゴルフYouTube「Sho-Time GOLF」とデジタルサイネージ...
+                                </h3>
+                            </div>
+                        </a>
+                        <a href="#news-20231012"
+                            class="block p-6 rounded-xl border border-gray-100 hover:border-soichi-blue/30 hover:shadow-md transition-all duration-300 bg-white group">
+                            <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                                <div class="flex items-center gap-4 min-w-fit">
+                                    <span class="text-gray-500 font-mono text-sm">2023.10.12</span>
+                                    <span
+                                        class="inline-block px-2 py-1 text-xs font-semibold text-soichi-blue bg-blue-50 rounded-full">Press
+                                        Release</span>
+                                </div>
+                                <h3
+                                    class="font-medium text-gray-900 group-hover:text-soichi-blue transition-colors line-clamp-1">
+                                    日本プロゴルフ界初※ 国内最高峰のメジャー大会にて来場証明NFTを無料配布...
+                                </h3>
+                            </div>
+                        </a>
+                        <a href="#news-20230120"
+                            class="block p-6 rounded-xl border border-gray-100 hover:border-soichi-blue/30 hover:shadow-md transition-all duration-300 bg-white group">
+                            <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                                <div class="flex items-center gap-4 min-w-fit">
+                                    <span class="text-gray-500 font-mono text-sm">2023.01.20</span>
+                                    <span
+                                        class="inline-block px-2 py-1 text-xs font-semibold text-gray-600 bg-gray-100 rounded-full">Info</span>
+                                </div>
+                                <h3
+                                    class="font-medium text-gray-900 group-hover:text-soichi-blue transition-colors line-clamp-1">
+                                    Soichi株式会社を設立いたしました
+                                </h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-20">
+
+                    <!-- News Item 1 (Eniad) -->
+                    <article id="news-20251118"
+                        class="flex flex-col md:flex-row gap-6 md:gap-10 border-b border-gray-100 pb-12 scroll-mt-32">
+                        <div class="md:w-1/4 flex flex-col">
+                            <span class="text-gray-500 font-mono mb-2">2025.11.18</span>
+                            <span
+                                class="inline-block px-3 py-1 text-xs font-semibold text-soichi-blue bg-blue-50 rounded-full w-fit">Press
+                                Release</span>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h2 class="text-2xl font-bold mb-4">
+                                Soichi、エニアド社と提携し、ゴルフYouTube「Sho-Time GOLF」とデジタルサイネージ「ゴルフアドボックス」を融合させた新広告パッケージを提供開始
+                            </h2>
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                Soichi株式会社（本社：東京都渋谷区、代表取締役CEO：挾間 彬）は、ゴルフ場サイネージメディア最大手のエニアド株式会社と戦略的パートナーシップを締結しました。
+                                <br><br>
+                                本提携により、登録者数XX万人を誇る人気ゴルフYouTubeチャンネル「Sho-Time
+                                GOLF」のインフルエンサー力と、全国XXX箇所のゴルフ場に設置された「ゴルフアドボックス」のリーチ力を掛け合わせた、オンライン×オフライン統合型マーケティングソリューションの提供を開始します。
+                                <br><br>
+                                認知獲得から購買行動までをシームレスに繋ぐこの新しい広告パッケージは、ゴルフ業界のみならず、富裕層向け商材を扱う企業の皆様に、かつてない費用対効果の高いプロモーション機会を提供します。
+                            </p>
+                            <a href="#" class="inline-flex items-center text-soichi-blue font-medium hover:underline">
+                                Read more (PDF) <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- News Item 2 (JGA NFT) -->
+                    <article id="news-20231012"
+                        class="flex flex-col md:flex-row gap-6 md:gap-10 border-b border-gray-100 pb-12 scroll-mt-32">
+                        <div class="md:w-1/4 flex flex-col">
+                            <span class="text-gray-500 font-mono mb-2">2023.10.12</span>
+                            <span
+                                class="inline-block px-3 py-1 text-xs font-semibold text-soichi-blue bg-blue-50 rounded-full w-fit">Press
+                                Release</span>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h2 class="text-2xl font-bold mb-4">
+                                日本プロゴルフ界初※ 国内最高峰のメジャー大会にて来場証明NFTを無料配布、特別版NFTを競技会場にて数量限定で販売！
+                            </h2>
+                            <div class="text-gray-600 leading-relaxed mb-6 space-y-4">
+                                <p>
+                                    Web3型のマーケティングを展開するSoichi株式会社（東京都渋谷区、代表取締役：挾間
+                                    彬、以下Soichi）は公益財団法人日本ゴルフ協会（東京都中央区、以下、JGA）と協力し、ゴルフの普及振興や選手強化育成を目的とした、リアルイベントとデジタル空間の垣根を超えたゴルフコミュニティ構築に向けた取り組みを開始しました。
+                                </p>
+                                <p>
+                                    本取り組みは2023年度のJGA主催、国内メジャー競技を皮切りに、今後JGAの主催する様々な競技やイベントにて順次拡大させていく予定です。
+                                </p>
+
+                                <h3 class="text-lg font-bold text-soichi-black mt-6 mb-2">本施策実施の目的</h3>
+                                <ul class="list-disc list-inside space-y-2 ml-2">
+                                    <li>日本国内の全ゴルフ関係者とJGAとのあらゆる関係性を可視化し、リアルな行動データを回収すること。</li>
+                                    <li>ゴルフ競技の伝統を保ちつつ、若年層にゴルフの魅力を訴求していくための一助とすること。</li>
+                                    <li>スポーツ界のパイオニアとして新たなデバイスを活用し、グローバルでの日本のプレゼンスを向上させること。</li>
+                                    <li>育成世代であるナショナルチームにブランド力を持たせ、新しいビジネスモデルを確立すること。</li>
+                                </ul>
+
+                                <h3 class="text-lg font-bold text-soichi-black mt-6 mb-2">大会記念NFTについて</h3>
+                                <p><strong>来場証明NFT（各日数量限定・無料配布）</strong><br>
+                                    プロモーションロゴ、及び入場日の日付が印字された大会限定デザインの来場証明NFT。</p>
+                                <p><strong>特別版NFT（数量限定・有料販売）</strong><br>
+                                    全5種類（PAR・BIRDIE・EAGLE・ALBATROSS・CONDOR）のNFTを数量限定で販売。</p>
+
+                                <h3 class="text-lg font-bold text-soichi-black mt-6 mb-2">ユーティリティ（保有特典）</h3>
+                                <p>大会公式グッズの獲得、出場選手サイン入りグッズの獲得、優勝選手のスコアカード(レプリカ)を獲得、表彰式後、優勝選手とのフォトセッションに参加、Discord限定ページへの参加など。
+                                </p>
+                            </div>
+                            <a href="#" class="inline-flex items-center text-soichi-blue font-medium hover:underline">
+                                Read more (PDF) <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- News Item 2 (Establishment) -->
+                    <article id="news-20230120"
+                        class="flex flex-col md:flex-row gap-6 md:gap-10 border-b border-gray-100 pb-12 scroll-mt-32">
+                        <div class="md:w-1/4 flex flex-col">
+                            <span class="text-gray-500 font-mono mb-2">2023.01.20</span>
+                            <span
+                                class="inline-block px-3 py-1 text-xs font-semibold text-gray-600 bg-gray-100 rounded-full w-fit">Info</span>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h2 class="text-2xl font-bold mb-4">
+                                Soichi株式会社を設立いたしました
+                            </h2>
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                テクノロジーとクリエイティブの力でビジネスの未来を実装するプロフェッショナル集団として、Soichi株式会社を設立いたしました。
+                                <br><br>
+                                私たちは、最先端のテクノロジーと洗練されたクリエイティブを融合させ、クライアントのビジネスに新たな価値を創造します。
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Pagination (Placeholder) -->
+                <div class="mt-20 flex justify-center">
+                    <nav class="flex space-x-2">
+                        <a href="#"
+                            class="px-4 py-2 border border-gray-200 rounded-lg text-gray-500 hover:bg-gray-50 hover:text-black transition-colors">Previous</a>
+                        <a href="#" class="px-4 py-2 bg-soichi-black text-white rounded-lg">1</a>
+                        <a href="#"
+                            class="px-4 py-2 border border-gray-200 rounded-lg text-gray-500 hover:bg-gray-50 hover:text-black transition-colors">Next</a>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-soichi-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="index.html" class="block mb-6">
+                        <img src="images/logo_transparent.png" alt="Soichi Inc."
+                            class="h-12 w-auto brightness-0 invert">
+                    </a>
+                    <p class="text-gray-400 max-w-sm">
+                        テクノロジーとクリエイティブで、<br>ビジネスの未来を実装する。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Sitemap</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="news.html" class="hover:text-white transition-colors">News</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-400 mb-2">Soichi株式会社</p>
+                    <p class="text-gray-400 mb-4">〒150-0043<br>東京都渋谷区道玄坂1丁目10番8号<br>渋谷道玄坂東急ビル2F−C</p>
+                    <a href="mailto:hasama@soichi.tokyo"
+                        class="text-soichi-yellow hover:text-yellow-400 transition-colors">hasama@soichi.tokyo</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">&copy; 2025 Soichi, Inc. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <!-- Social Icons Removed as per request -->
+                </div>
+            </div>
+        </div>
+    </footer>
