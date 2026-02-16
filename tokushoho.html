@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Soichi Inc.</title>
+    <title>特定商取引法に基づく表記 | Soichi Inc.</title>
     <link rel="icon" href="images/favicon.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -34,27 +34,13 @@
             font-family: 'Inter', 'Noto Sans JP', sans-serif;
             -webkit-font-smoothing: antialiased;
         }
-
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
     </style>
 </head>
 
 <body class="bg-white text-black">
 
     <!-- Navigation (Minimalist) -->
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md text-black transition-all duration-300 border-b border-gray-100"
-        id="navbar">
+    <nav class="fixed w-full z-50 mix-blend-difference text-white transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="flex justify-between h-24 items-center">
                 <a href="index.html" class="block">
@@ -69,7 +55,7 @@
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-black focus:outline-none">
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
                     <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16" />
@@ -93,83 +79,70 @@
     </nav>
 
     <main class="pt-32 pb-24">
-        <!-- Page Header -->
-        <section class="max-w-7xl mx-auto px-6 lg:px-12 mb-24">
-            <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 reveal-text"><span>ABOUT</span></h1>
-            <p class="text-xl md:text-2xl font-bold leading-relaxed fade-up max-w-3xl">
-                テクノロジーとクリエイティブで、<br>ビジネスの未来を実装する。
-            </p>
-        </section>
+        <section class="max-w-4xl mx-auto px-6 lg:px-12 mb-24">
+            <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-12">特定商取引法に基づく表記</h1>
 
-        <!-- CEO Message -->
-        <section class="max-w-7xl mx-auto px-6 lg:px-12 mb-32">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="fade-up">
-                    <img src="images/ceo.png" alt="CEO 挾間 彬"
-                        class="w-full grayscale hover:grayscale-0 transition-all duration-500">
-                </div>
-                <div class="fade-up">
-                    <h2 class="text-3xl font-black mb-8">「想像」を「実装」する。</h2>
-                    <div class="space-y-6 text-lg text-gray-800 leading-relaxed text-justify">
-                        <p>
-                            私たちSoichiは、単なる技術提供者ではありません。
-                            クライアントの皆様が描く未来のビジョンを、テクノロジーとクリエイティブの力で具現化するパートナーです。
-                        </p>
-                        <p>
-                            AIやブロックチェーンといった先端技術は、あくまで手段に過ぎません。
-                            重要なのは、それらを使って「誰に」「どんな価値」を届けるか。
-                            そして、その価値をどのように「伝える」か。
-                        </p>
-                        <p>
-                            私たちは、エンジニアリングとストーリーテリングの両輪で、
-                            ビジネスの変革と成長を加速させます。
-                        </p>
-                    </div>
-                    <div class="mt-12">
-                        <p class="font-bold text-xl">Soichi株式会社</p>
-                        <p class="text-gray-600">代表取締役CEO 挾間 彬</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Company Profile -->
-        <section class="max-w-7xl mx-auto px-6 lg:px-12">
-            <h2 class="section-title reveal-text"><span>PROFILE</span></h2>
-
-            <div class="border-t border-black mt-12">
-                <dl class="divide-y divide-gray-200">
-                    <div class="grid grid-cols-1 md:grid-cols-4 py-8">
-                        <dt class="font-bold text-lg md:col-span-1">会社名</dt>
-                        <dd class="mt-2 md:mt-0 md:col-span-3 text-lg">Soichi株式会社 (Soichi, Inc.)</dd>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-4 py-8">
-                        <dt class="font-bold text-lg md:col-span-1">設立</dt>
-                        <dd class="mt-2 md:mt-0 md:col-span-3 text-lg">2023年1月20日</dd>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-4 py-8">
-                        <dt class="font-bold text-lg md:col-span-1">代表者</dt>
-                        <dd class="mt-2 md:mt-0 md:col-span-3 text-lg">代表取締役CEO 挾間 彬</dd>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-4 py-8">
-                        <dt class="font-bold text-lg md:col-span-1">所在地</dt>
-                        <dd class="mt-2 md:mt-0 md:col-span-3 text-lg">
-                            〒150-0043<br>
-                            東京都渋谷区道玄坂1丁目10番8号<br>
-                            渋谷道玄坂東急ビル2F−C
-                        </dd>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-4 py-8">
-                        <dt class="font-bold text-lg md:col-span-1">事業内容</dt>
-                        <dd class="mt-2 md:mt-0 md:col-span-3 text-lg">
-                            <ul class="list-disc list-inside space-y-2">
-                                <li>事業変革支援 (AX / BX)</li>
-                                <li>メディア & IPソリューション</li>
-                                <li>Web/App開発</li>
-                            </ul>
-                        </dd>
-                    </div>
-                </dl>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse border-t border-gray-200">
+                    <tbody>
+                        <tr class="border-b border-gray-200">
+                            <th class="py-6 pr-6 font-bold text-gray-900 md:w-1/3">販売業者名</th>
+                            <td class="py-6 text-gray-800">Soichi株式会社</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <th class="py-6 pr-6 font-bold text-gray-900">代表責任者</th>
+                            <td class="py-6 text-gray-800">挾間 彬</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <th class="py-6 pr-6 font-bold text-gray-900">所在地</th>
+                            <td class="py-6 text-gray-800">〒150-0043<br>東京都渋谷区道玄坂1丁目10番8号<br>渋谷道玄坂東急ビル2F−C</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <th class="py-6 pr-6 font-bold text-gray-900">電話番号</th>
+                            <td class="py-6 text-gray-800">
+                                お問い合わせ先メールアドレスまでご請求いただければ、遅滞なく開示いたします。
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <th class="py-6 pr-6 font-bold text-gray-900">メールアドレス</th>
+                            <td class="py-6 text-gray-800">jo@soichi.tokyo</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <th class="py-6 pr-6 font-bold text-gray-900">販売価格</th>
+                            <td class="py-6 text-gray-800">
+                                各サービスの購入ページに表示しております。表示価格は税込価格です。
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <th class="py-6 pr-6 font-bold text-gray-900">商品代金以外の必要料金</th>
+                            <td class="py-6 text-gray-800">
+                                インターネット接続料金その他の電気通信回線の通信に関する費用、銀行振込等をご利用の際の振込手数料、消費税（表示価格が税込でない場合）等はお客様のご負担となります。
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <th class="py-6 pr-6 font-bold text-gray-900">代金の支払時期</th>
+                            <td class="py-6 text-gray-800">
+                                クレジットカード決済、または請求書払いによる銀行振込。お支払時期は各プランまたは契約内容に基づきます。
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <th class="py-6 pr-6 font-bold text-gray-900">商品の引渡時期</th>
+                            <td class="py-6 text-gray-800">
+                                お手続き完了後、すぐにご利用いただけます。特定のコンサルティングサービス等の場合は、契約に基づき提供を開始いたします。
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <th class="py-6 pr-6 font-bold text-gray-900">返品・キャンセルについて</th>
+                            <td class="py-6 text-gray-800">
+                                デジタルコンテンツおよびサービスの特性上、提供開始後の返品・返金は原則としてお受けできません。解約（退会）は随時可能です。
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <th class="py-6 pr-6 font-bold text-gray-900">制定日</th>
+                            <td class="py-6 text-gray-800">2026年2月13日</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
