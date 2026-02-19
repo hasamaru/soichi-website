@@ -8,6 +8,7 @@
   --soichi-blue: #0066cc;
   --soichi-red: #cc0000;
   --soichi-yellow: #FFD700;
+  --soichi-teal: #2ab8c8;
 }
 
 @theme inline {
@@ -18,6 +19,7 @@
   --color-soichi-blue: var(--soichi-blue);
   --color-soichi-red: var(--soichi-red);
   --color-soichi-yellow: var(--soichi-yellow);
+  --color-soichi-teal: var(--soichi-teal);
   --font-sans: var(--font-inter), var(--font-noto-jp), sans-serif;
   --font-noto: var(--font-noto-jp), sans-serif;
 }
